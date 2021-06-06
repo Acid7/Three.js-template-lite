@@ -28,10 +28,14 @@ nav
 		&:hover
 			color #ffcc00
 		&:not(:last-child)
-			margin-right .5rem
+			margin-right 1rem
 
 canvas
 	display block
 	position absolute
 	top 0
 	left 0
+
+@media (max-width: 414px)
+	nav
+		display none

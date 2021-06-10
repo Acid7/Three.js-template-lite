@@ -1,6 +1,6 @@
+import * as dat from 'dat.gui'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import * as dat from 'dat.gui'
 
 import './app.styl'
 
@@ -18,7 +18,7 @@ const settings = {
 
 // Dat.gui
 
-const gui = new dat.GUI()
+const gui = new dat.GUI({ width: 300 })
 gui.add(settings, 'foo', 0, 10, 0.01)
 gui.add(settings, 'bar', 0, 10, 0.01)
 
@@ -87,6 +87,8 @@ class Scene {
 			fragmentShader,
 			uniforms: {
 				uTime: { value: 0 },
+				uFoo: { value: 0 },
+				uBar: { value: 1 },
 			},
 			// wireframe: true,
 		})
@@ -100,6 +102,8 @@ class Scene {
 
 		// Update uniforms
 		this.mesh.material.uniforms.uTime.value = this.clock.getElapsedTime()
+		this.mesh.material.uniforms.uFoo.value = settings.uFoo
+		this.mesh.material.uniforms.uBar.value = settings.uBar
 
 		// Render
 		this.renderer.render(this.scene, this.camera)

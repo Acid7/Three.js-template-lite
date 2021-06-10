@@ -8,11 +8,19 @@ body
 	overflow auto
 	background-color #000
 
+canvas
+	display block
+	position absolute
+	top 0
+	left 0
+
+// Nav
+
 nav
 	position absolute
 	z-index 1
-	top 3rem
-	left 3rem
+	top 2rem
+	left 2rem
 	a
 		display inline-block
 		color #eee
@@ -28,13 +36,7 @@ nav
 		&:hover
 			color #ffcc00
 		&:not(:last-child)
-			margin-right 1rem
-
-canvas
-	display block
-	position absolute
-	top 0
-	left 0
+			margin-right .5rem
 
 @media (max-width: 414px)
 	nav

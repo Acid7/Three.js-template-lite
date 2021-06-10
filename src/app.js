@@ -30,19 +30,18 @@ class Scene {
 	constructor() {
 
 		// Dimensions
-
 		this.width = window.innerWidth
 		this.height = window.innerHeight
 		this.clock = new THREE.Clock()
 
 		// Init
-
 		this.setRenderer()
 		this.setCamera()
 		this.addGeometry()
 		this.render()
 	}
 
+	// Renderer
 
 	setRenderer() {
 		this.scene = new THREE.Scene()
@@ -56,7 +55,6 @@ class Scene {
 		this.renderer.setSize(this.width, this.height)
 
 		// Resize
-
 		window.addEventListener('resize', () => {
 			this.width = window.innerWidth
 			this.height = window.innerHeight
@@ -66,6 +64,7 @@ class Scene {
 		})
 	}
 
+	// Camera
 
 	setCamera() {
 		this.camera = new THREE.PerspectiveCamera(
@@ -76,12 +75,10 @@ class Scene {
 		)
 
 		this.camera.position.set(0, 0, 2)
-
-		// Orbit Controls
-
 		this.controls = new OrbitControls(this.camera, this.renderer.domElement)
 	}
 
+	// Geometry
 
 	addGeometry() {
 		const geometry = new THREE.PlaneGeometry(1, 1, 16, 16)
@@ -97,15 +94,14 @@ class Scene {
 		this.scene.add(this.mesh)
 	}
 
+	// Render
 
 	render() {
 
 		// Update uniforms
-
 		this.mesh.material.uniforms.uTime.value = this.clock.getElapsedTime()
 
 		// Render
-
 		this.renderer.render(this.scene, this.camera)
 		requestAnimationFrame(() => { this.render() })
 	}

@@ -1,6 +1,6 @@
-import * as dat from 'dat.gui'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import { Pane } from 'tweakpane'
 
 import './app.styl'
 
@@ -16,11 +16,11 @@ const settings = {
 	bar: 1,
 }
 
-// Dat.gui
+// Tweakpane
 
-const gui = new dat.GUI({ width: 300 })
-gui.add(settings, 'foo', 0, 10, 0.01)
-gui.add(settings, 'bar', 0, 10, 0.01)
+const pane = new Pane()
+pane.addInput(settings, 'foo', { min: 0, max: 10, step: 0.01 })
+pane.addInput(settings, 'bar', { min: 0, max: 10, step: 0.01 })
 
 
 

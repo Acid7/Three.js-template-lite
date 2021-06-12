@@ -14,9 +14,9 @@
   "author": "Acid7",
   "license": "MIT",
   "dependencies": {
-    "dat.gui": "^0.7.7",
     "glsl-noise": "^0.0.0",
-    "three": "^0.128.0"
+    "three": "^0.128.0",
+    "tweakpane": "^3.0.2"
   },
   "devDependencies": {
     "@parcel/transformer-glsl": "^2.0.0-beta.2",

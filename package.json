@@ -1,8 +1,6 @@
 {
   "author": "Acid7",
   "license": "MIT",
-  "name": "three-js-template-lite",
-  "version": "1.0.0",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",

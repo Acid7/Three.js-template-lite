@@ -2,6 +2,8 @@
 
 Basic Three.js template setup.
 
+---
+
 ```bash
 npm install
 

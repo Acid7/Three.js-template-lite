@@ -4,8 +4,8 @@ import { Pane } from 'tweakpane'
 
 import './app.styl'
 
-import vertexShader from './shaders/vertex.glsl?raw'
-import fragmentShader from './shaders/fragment.glsl?raw'
+import vertexShader from './shaders/vertex.glsl'
+import fragmentShader from './shaders/fragment.glsl'
 
 
 

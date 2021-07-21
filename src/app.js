@@ -87,8 +87,6 @@ class Scene {
 			fragmentShader,
 			uniforms: {
 				uTime: { value: 0 },
-				uFoo: { value: 0 },
-				uBar: { value: 1 },
 			},
 			// wireframe: true,
 		})
@@ -102,12 +100,10 @@ class Scene {
 
 		// Update uniforms
 		this.mesh.material.uniforms.uTime.value = this.clock.getElapsedTime()
-		this.mesh.material.uniforms.uFoo.value = settings.uFoo
-		this.mesh.material.uniforms.uBar.value = settings.uBar
 
 		// Render
 		this.renderer.render(this.scene, this.camera)
-		requestAnimationFrame(() => { this.render() })
+		requestAnimationFrame(this.render.bind(this))
 	}
 
 }

@@ -1,8 +1,6 @@
 // #pragma glslify: pnoise = require(glsl-noise/periodic/3d)
 
 uniform float uTime;
-uniform float uFoo;
-uniform float uBar;
 
 varying vec2 vUv;
 

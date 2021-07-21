@@ -2,7 +2,7 @@
   "author": "Acid7",
   "license": "MIT",
   "scripts": {
-    "dev": "vite --open",
+    "dev": "vite --open --host",
     "build": "vite build",
     "serve": "vite preview"
   },
